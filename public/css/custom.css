@@ -30,6 +30,11 @@ body {
   font-family: 'Indie Flower', sans-serif;
 }
 
+#lastSentence {
+  text-decoration: underline;
+  color: #851AE0;
+}
+
 .screenshots {
   padding-top: 3rem;
   position: relative;

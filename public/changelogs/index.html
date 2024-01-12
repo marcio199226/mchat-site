@@ -58,11 +58,11 @@
       os = null;
 
     if (macosPlatforms.indexOf(platform) !== -1) {
-      os = 'Mac OS';
+      os = 'osx';
     } else if (windowsPlatforms.indexOf(platform) !== -1) {
-      os = 'Windows';
+      os = 'win';
     } else if (!os && /Linux/.test(platform)) {
-      os = 'Linux';
+      os = 'linux';
     }
 
     return os;
