@@ -1,3 +1,6 @@
+:root {
+  --screenshots-animation-state: paused;
+}
 html,
 body {
   height: 100%;
@@ -15,7 +18,19 @@ body {
   left: 0px;
 }
 
-.gallery {
+.pixelify {
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+.neonify {
+  font-family: 'Tilt Neon', sans-serif;
+}
+
+.indify {
+  font-family: 'Indie Flower', sans-serif;
+}
+
+.screenshots {
   padding-top: 3rem;
   position: relative;
   margin: 0 auto;
@@ -23,8 +38,45 @@ body {
   min-height: 240px;
   height: 240px;
   max-height: 100%;
+  transform-style: flat;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-out;
+  transition-property: opacity visibility;
+  will-change: transform opacity scale;
+}
+.screenshots.show {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 1s;
+  transform-style: preserve-3d;
+  animation: scale 1s linear;
+}
+
+.screenshots.rotate {
   transform-style: preserve-3d;
   animation: rotate 90s linear infinite;
+  animation-play-state: var(--screenshots-animation-state);
+}
+
+@keyframes scale {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  90% {
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes rotate {
@@ -37,13 +89,14 @@ body {
   }
 }
 
+
 .particles-js-canvas-el {
   position: fixed;
   top: 0;
   z-index: -1;
 }
 
-.gallery span {
+.screenshots span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,7 +108,7 @@ body {
   transform: rotateY(calc(var(--i) * 45deg)) translateZ(440px);
 }
 
-.gallery span img {
+.screenshots span img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -66,20 +119,28 @@ body {
   border-radius: 8px;
   backface-visibility: hidden;
 }
-.gallery span img.contain {
+.screenshots span img.contain {
   -o-object-fit: contain;
      object-fit: contain;
 }
 
 .text-editor-wrap {
   display: block;
+  visibility: hidden;
+  opacity: 0;
   margin: 2rem auto;
   max-width: 640px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.8) 0px 20px 70px;
   clear: both;
   overflow: hidden;
-  transition: all 0.5s ease-out;
+  transition: all 2s ease-out;
+}
+.text-editor-wrap.show {
+  visibility: visible;
+  opacity: 1;
+  transition-duration: 3s; 
+  transition-delay: 0.5s;
 }
 .title-bar {
   color: black;
@@ -99,7 +160,7 @@ body {
   padding: 10px;
   color: #f0f0f0;
   text-shadow: #000 0px 1px 0px;
-  font-family: "Consolas", "Courier New", "Courier";
+  font-family: "Tilt Neon";
   font-size: 1.3em;
   line-height: 1.2em;
   font-weight: 500;
@@ -110,4 +171,21 @@ body {
 
 .pb-5 {
   padding-bottom: 1.25rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    height: 100px;
+    top: -10px;
+    left: 0px;
+  }
+
+  .text-body {
+    font-size: 1em;
+    line-height: 1.1em;
+  }
+
+  .text-editor-wrap {
+    margin: 1rem auto;
+  }
 }
