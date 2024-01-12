@@ -70,12 +70,9 @@
 
   window.addEventListener("load", (event) => {
     particlesJS.load('particles-js', 'particles.json', null);
-    [".text-editor-wrap", '.screenshots'].forEach(el => document.querySelector(el).classList.add('show'));
-    setTimeout(() => {
-      document.querySelector('.screenshots').classList.add('rotate')
-      document.body.style.setProperty("--screenshots-animation-state", "running");
-    }, 500)
     const platform = detectOS();
+    let mobileScreenIdx = 0;
+    const screenshots = ['screenshots/1.webp', 'screenshots/2.webp', 'screenshots/4.webp', 'screenshots/5.webp', 'screenshots/6.webp','screenshots/7.webp'];
 
     
   });
