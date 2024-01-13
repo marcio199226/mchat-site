@@ -131,6 +131,7 @@ body {
 .screenshots-mobile {
   margin-top: 2.5rem;
   transition: all 1s ease-out;
+  display: none;
   visibility: hidden;
   opacity: 0 !important;
 }
@@ -211,6 +212,7 @@ body {
     display: none;
   }
   .screenshots-mobile.show {
+    display: block;
     visibility: visible;
     opacity: 1 !important;
   }
