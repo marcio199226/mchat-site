@@ -30,7 +30,7 @@ body {
   font-family: 'Indie Flower', sans-serif;
 }
 
-#lastSentence {
+#lastSentence a {
   text-decoration: underline;
   color: #851AE0;
 }
