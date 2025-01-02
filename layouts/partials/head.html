@@ -1,0 +1,202 @@
+<meta http-equiv="Content-Security-Policy"
+  content="default-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'nonce-rAnd0m'; style-src 'self' 'unsafe-inline' fonts.googleapis.com; script-src-elem	'self' 'unsafe-inline'; font-src fonts.gstatic.com; frame-src github.com" />
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<base href="/mchat-site/public/" />
+<title>Mchat</title>
+<meta name="description"
+  content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+
+<meta itemprop="name" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta name="application-name" content="{{ .Title }} | {{ .Site.Title }}" />
+
+<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ .Site.Title }}" />
+<meta property="og:description"
+  content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:locale" content="en">
+<meta property="og:image" content="{{ .Params.Site.BaseURL }}{{ .Site.Params.og_image | relURL }}" />
+<meta property="og:image:secure_url" content="{{ .Site.Params.og_image | absURL }}" />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="images/mchat_icon.svg" />
+
+{{ $customStyles := resources.Get "/css/custom.css" | postCSS }}
+<link href="{{ $customStyles.RelPermalink }}" rel="stylesheet">
+
+{{ $styles := resources.Get "/css/style.css" | postCSS }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
+
+{{ $jsTyped := resources.Get "js/typed.js" }}
+<script src="{{ $jsTyped.RelPermalink }}" defer></script>
+{{ $jsParticles := resources.Get "js/particles.js" }}
+<script src="{{ $jsParticles.RelPermalink }}" defer></script>
+
+
+<script type="text/javascript" nonce="rAnd0m">
+  function detectOS() {
+    let userAgent = window.navigator.userAgent,
+        os = null;
+
+    if (/iPhone|iPad|iPod/.test(userAgent) || (/Mac/.test(userAgent) && 'ontouchend' in document)) {
+      os = 'ios';
+    } else if (/Android/.test(userAgent)) {
+      os = 'android';
+    } else if (/Macintosh|MacIntel|MacPPC|Mac68K/.test(userAgent)) {
+      os = 'osx';
+    } else if (/Win32|Win64|Windows|WinCE/.test(userAgent)) {
+      os = 'win';
+    } else if (!os && /Linux/.test(userAgent)) {
+      os = 'linux';
+    }
+
+    return os;
+  }
+
+  window.addEventListener("load", (event) => {
+    particlesJS.load('particles-js', 'particles.json', null);
+    const platform = detectOS();
+    let mobileScreenIdx = 0;
+    const screenshots = ['screenshots/1.webp', 'screenshots/2.webp', 'screenshots/4.webp', 'screenshots/5.webp', 'screenshots/6.webp','screenshots/7.webp'];
+
+    {{ if .IsHome }}
+
+    [".terminal", '.screenshots'].forEach(el => document.querySelector(el).classList.add('show'));
+    setTimeout(() => {
+      document.querySelector('.screenshots').classList.add('rotate')
+      document.body.style.setProperty("--screenshots-animation-state", "running");
+      document.querySelector('.screenshots-mobile').classList.add('show');
+    }, 500)
+    setInterval(() => {
+      console.log('mobileScreenIdx', mobileScreenIdx)
+      mobileScreenIdx++;
+      if(mobileScreenIdx > screenshots.length-1) {
+        mobileScreenIdx = 0;
+      }
+      document.querySelector('.screenshots-mobile img').src = screenshots[mobileScreenIdx];
+    }, 1500);
+
+    const objectives = new Typed('#objectives', {
+      strings: ["<i>Anonymous</i>", "<i>Multiplatform</i>", "<i>Respecting your privacy</i>"],
+      typeSpeed: 60,
+      loop: true,
+      loopCount: 5,
+      backSpeed: 35,
+      fadeOut: false,
+      smartBackspace: true
+    });
+
+    const firstSentence = new Typed('#firstSentence', {
+      strings: ["<i>End2end local double layer RSA/AES encryption</i>"],
+      typeSpeed: 20,
+      loop: false,
+      backSpeed: 0,
+      fadeOut: true,
+    });
+    const secondSentence = new Typed('#secondSentence', {
+      strings: ["<i>Fully anonymous no email, no phone number!</i>"],
+      typeSpeed: 20,
+      loop: false,
+      backSpeed: 0,
+      fadeOut: true,
+    });
+    secondSentence.stop();
+    firstSentence.complete = () => {
+      document.querySelector('#firstSentence').nextElementSibling.remove();
+      document.querySelector('#secondSentence').parentElement.classList.remove('hidden');
+      secondSentence.start();
+    }
+    const thirdSentence = new Typed('#thirdSentence', {
+      strings: ["<i>Zero trackers &amp; no logs both client and server side</i>"],
+      typeSpeed: 20,
+      loop: false,
+      backSpeed: 0,
+      fadeOut: true,
+    });
+    thirdSentence.stop();
+    secondSentence.complete = () => {
+      secondSentence.toggleBlinking();
+      document.querySelector('#secondSentence').nextElementSibling.remove();
+      document.querySelector('#thirdSentence').parentElement.classList.remove('hidden');
+      thirdSentence.start();
+    }
+    thirdSentence.complete = () => {
+      thirdSentence.toggleBlinking();
+    }
+    // 4th
+    const fourthSentence = new Typed('#fourthSentence', {
+      strings: ["<i>Tor proxy &amp; hidden service</i>"],
+      typeSpeed: 20,
+      loop: false,
+      backSpeed: 0,
+      fadeOut: true,
+    });
+    fourthSentence.stop();
+    thirdSentence.complete = () => {
+      thirdSentence.toggleBlinking();
+      document.querySelector('#thirdSentence').nextElementSibling.remove();
+      document.querySelector('#fourthSentence').parentElement.classList.remove('hidden');
+      fourthSentence.start();
+    }
+    fourthSentence.complete = () => {
+      fourthSentence.toggleBlinking();
+    }
+    //5th
+    const fifthSentence = new Typed('#fifthSentence', {
+      strings: ["<i>No conversations history</i>"],
+      typeSpeed: 20,
+      loop: false,
+      backSpeed: 0,
+      fadeOut: true,
+    });
+    fifthSentence.stop();
+    fourthSentence.complete = () => {
+      fourthSentence.toggleBlinking();
+      document.querySelector('#fourthSentence').nextElementSibling.remove();
+      document.querySelector('#fifthSentence').parentElement.classList.remove('hidden');
+      fifthSentence.start();
+    }
+    fifthSentence.complete = () => {
+      fifthSentence.toggleBlinking();
+    }
+    // last
+    const desktopSentence = new Typed('#lastSentence', {
+      strings: [
+        `<a href="download/mchat-${platform}.zip" target="_blank" title="Download latest">~/Downloads/mchat-${platform}</a> <small class="text-white">v1.7.2-beta.1</small>`,
+      ],
+      typeSpeed: 30,
+      loop: false,
+      backSpeed: 0,
+      fadeOut: true,
+    });
+    const mobileSentence = new Typed('#lastSentence', {
+      strings: [
+        `<a href="https://app-mchat.surge.sh/" target="_blank" title="Open webapp">For Android/iOS go to webapp</a>`,
+      ],
+      typeSpeed: 30,
+      loop: false,
+      backSpeed: 0,
+      fadeOut: true,
+    });
+    const lastSentence = platform === 'ios' || platform === 'android' ? mobileSentence : desktopSentence;
+    lastSentence.stop();
+    fifthSentence.complete = () => {
+      fifthSentence.toggleBlinking();
+      document.querySelector('#fifthSentence').nextElementSibling.remove();
+      document.querySelector('#lastSentence').parentElement.classList.remove('hidden');
+      lastSentence.start();
+    }
+    {{ end }}
+  });
+</script>

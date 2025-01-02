@@ -1,0 +1,19 @@
+{
+   "baseURL": "https://marcio199226.github.io/mchat-site/public/",
+   "languageCode": "en-us",
+   "title": "Mchat",
+   "theme": "minimal_marketing",
+   "server": {
+      "headers": [
+         {
+            "for": "/**",
+            "values": {
+               "Referrer-Policy": "strict-origin-when-cross-origin",
+               "X-Content-Type-Options": "nosniff",
+               "X-Frame-Options": "DENY",
+               "X-XSS-Protection": "1; mode=block"
+            }
+         }
+      ]
+   }
+}
