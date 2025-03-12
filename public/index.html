@@ -1,23 +1,377 @@
-<!doctype html><html lang=en><head><meta name=generator content="Hugo 0.140.2"><meta http-equiv=Content-Security-Policy content="default-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'nonce-rAnd0m'; style-src 'self' 'unsafe-inline' fonts.googleapis.com; script-src-elem	'self' 'unsafe-inline'; font-src fonts.gstatic.com; frame-src github.com"><meta http-equiv=Content-Type content="text/html" charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=msapplication-TileColor content="#da532c"><meta name=theme-color content="#ffffff"><base href=/mchat-site/public/><title>Mchat</title>
-<meta name=description content="Anonymous instant chat app"><meta itemprop=name content="Mchat | Mchat"><meta name=application-name content="Mchat | Mchat"><meta property="og:title" content="Mchat | Mchat"><meta property="og:type" content="website"><meta property="og:title" content="Mchat"><meta property="og:description" content="Anonymous instant chat app"><meta property="og:site_name" content="Mchat"><meta property="og:url" content="https://marcio199226.github.io/mchat-site/public/"><meta property="og:locale" content="en"><meta property="og:image" content="/images/defaults/featured_image.jpg"><meta property="og:image:secure_url" content="https://marcio199226.github.io/images/defaults/featured_image.jpg"><meta property="og:type" content="website"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel=stylesheet><link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel=stylesheet><link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel=stylesheet><link rel=icon type=image/x-icon href=images/mchat_icon.svg><link href=/mchat-site/public/css/custom.css rel=stylesheet><link rel=stylesheet href=/mchat-site/public/css/style.css integrity><script src=/mchat-site/public/js/typed.js defer></script><script src=/mchat-site/public/js/particles.js defer></script><script type=text/javascript nonce=rAnd0m>function detectOS(){let t=window.navigator.userAgent,e=null;return/iPhone|iPad|iPod/.test(t)||/Mac/.test(t)&&"ontouchend"in document?e="ios":/Android/.test(t)?e="android":/Macintosh|MacIntel|MacPPC|Mac68K/.test(t)?e="osx":/Win32|Win64|Windows|WinCE/.test(t)?e="win":!e&&/Linux/.test(t)&&(e="linux"),e}window.addEventListener("load",e=>{particlesJS.load("particles-js","particles.json",null);const i=detectOS();let o=0;const r=["screenshots/1.webp","screenshots/2.webp","screenshots/4.webp","screenshots/5.webp","screenshots/6.webp","screenshots/7.webp"];[".terminal",".screenshots"].forEach(e=>document.querySelector(e).classList.add("show")),setTimeout(()=>{document.querySelector(".screenshots").classList.add("rotate"),document.body.style.setProperty("--screenshots-animation-state","running"),document.querySelector(".screenshots-mobile").classList.add("show")},500),setInterval(()=>{console.log("mobileScreenIdx",o),o++,o>r.length-1&&(o=0),document.querySelector(".screenshots-mobile img").src=r[o]},1500);const h=new Typed("#objectives",{strings:["<i>Anonymous</i>","<i>Multiplatform</i>","<i>Respecting your privacy</i>"],typeSpeed:60,loop:!0,loopCount:5,backSpeed:35,fadeOut:!1,smartBackspace:!0}),l=new Typed("#firstSentence",{strings:["<i>End2end local double layer RSA/AES encryption</i>"],typeSpeed:20,loop:!1,backSpeed:0,fadeOut:!0}),a=new Typed("#secondSentence",{strings:["<i>Fully anonymous no email, no phone number!</i>"],typeSpeed:20,loop:!1,backSpeed:0,fadeOut:!0});a.stop(),l.complete=()=>{document.querySelector("#firstSentence").nextElementSibling.remove(),document.querySelector("#secondSentence").parentElement.classList.remove("hidden"),a.start()};const t=new Typed("#thirdSentence",{strings:["<i>Zero trackers &amp; no logs both client and server side</i>"],typeSpeed:20,loop:!1,backSpeed:0,fadeOut:!0});t.stop(),a.complete=()=>{a.toggleBlinking(),document.querySelector("#secondSentence").nextElementSibling.remove(),document.querySelector("#thirdSentence").parentElement.classList.remove("hidden"),t.start()},t.complete=()=>{t.toggleBlinking()};const n=new Typed("#fourthSentence",{strings:["<i>Tor proxy &amp; hidden service</i>"],typeSpeed:20,loop:!1,backSpeed:0,fadeOut:!0});n.stop(),t.complete=()=>{t.toggleBlinking(),document.querySelector("#thirdSentence").nextElementSibling.remove(),document.querySelector("#fourthSentence").parentElement.classList.remove("hidden"),n.start()},n.complete=()=>{n.toggleBlinking()};const s=new Typed("#fifthSentence",{strings:["<i>No conversations history</i>"],typeSpeed:20,loop:!1,backSpeed:0,fadeOut:!0});s.stop(),n.complete=()=>{n.toggleBlinking(),document.querySelector("#fourthSentence").nextElementSibling.remove(),document.querySelector("#fifthSentence").parentElement.classList.remove("hidden"),s.start()},s.complete=()=>{s.toggleBlinking()};const d=new Typed("#lastSentence",{strings:[`<a href="download/mchat-${i}.zip" target="_blank" title="Download latest">~/Downloads/mchat-${i}</a> <small class="text-white">v1.7.2-beta.1</small>`],typeSpeed:30,loop:!1,backSpeed:0,fadeOut:!0}),u=new Typed("#lastSentence",{strings:[`<a href="https://app-mchat.surge.sh/" target="_blank" title="Open webapp">For Android/iOS go to webapp</a>`],typeSpeed:30,loop:!1,backSpeed:0,fadeOut:!0}),c=i==="ios"||i==="android"?u:d;c.stop(),s.complete=()=>{s.toggleBlinking(),document.querySelector("#fifthSentence").nextElementSibling.remove(),document.querySelector("#lastSentence").parentElement.classList.remove("hidden"),c.start()}})</script></head><body class="bg-gray-900 text-white"><header class="absolute inset-x-0 top-0 z-50"><nav class="flex items-center justify-between p-6 lg:px-8" aria-label=Global><div class="flex lg:flex-1"><a href=# class="-m-1.5 p-1.5"><span class=sr-only>Mchat</span>
-<img class=logo src=images/mchat_logo_color.png alt></a></div><iframe src=https://github.com/sponsors/marcio199226/button title="Sponsor marcio199226" height=32 width=114 style=border:0;border-radius:6px;margin-right:8px></iframe><div class="flex lg:hidden"><button type=button class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400" id=mobile-navbar-open-btn>
-<span class=sr-only>Open main menu</span><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg></button></div><div class="hidden lg:flex lg:gap-x-12"><a href=changelogs class="text-sm font-semibold leading-6 text-white pixelify">#Changelog (v1.7.2-beta.1)</a></div></nav><div class=hidden role=dialog aria-modal=true id=mobile-navbar-overlay><div class="fixed inset-0 z-50"></div><div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10"><div class="flex items-center justify-between"><a href=# class="-m-1.5 p-1.5"><span class=sr-only>Mchat</span>
-<img class="h-10 w-auto" src=images/mchat_icon.svg alt>
-</a><button type=button class="-m-2.5 rounded-md p-2.5 text-gray-400" id=mobile-navbar-close-btn>
-<span class=sr-only>Close menu</span><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg></button></div><div class="mt-6 flow-root"><div class="-my-6 divide-y divide-gray-500/25"><div class="space-y-2 py-6"><a href=changelogs class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800 pixelify">#Changelog (v1.7.2-beta.1)</a></div></div></div></div></div></header><div class="main-wrapper flex flex-col pt-6"><div id=particles-js class="main grow"><div class="relative isolate"><div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden=true><div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path:polygon(74.1% 44.1%,100% 61.6%,97.5% 26.9%,85.5% .1%,80.7% 2%,72.5% 32.5%,60.2% 62.4%,52.4% 68.1%,47.5% 58.3%,45.2% 34.5%,27.5% 76.7%,.1% 64.9%,17.9% 100%,27.6% 76.8%,76.1% 97.7%,74.1% 44.1%)"></div></div><div class="py-8 sm:py-16 lg:pb-40"><div class="mx-auto max-w-7xl px-6 lg:px-8"><div class="mx-auto max-w-2xl text-center"><h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl pixelify">&lt; Mchat /></h1><p class="mt-2 text-lg leading-8 text-gray-300 neonify"><span style=color:#851ae0;font-weight:400;font-size:1.5rem;min-width:150px id=objectives></span>
-chat app</p><div class=terminal><div class=title-bar><span class=title>mchat &mdash; bash &mdash; 80x<span class=terminal-height>25</span></span></div><div class=text-body><div class=line><div class=hostname><span style=color:#d79921>root</span>@<span style=color:#98971a>mchat</span></div>$ <span id=firstSentence></span></div><div class=hidden><div class=hostname><span style=color:#d79921>root</span>@<span style=color:#98971a>mchat</span></div>$ <span id=secondSentence></span></div><div class=hidden><div class=hostname><span style=color:#d79921>root</span>@<span style=color:#98971a>mchat</span></div>$ <span id=thirdSentence></span></div><div class=hidden><div class=hostname><span style=color:#d79921>root</span>@<span style=color:#98971a>mchat</span></div>$ <span id=fourthSentence></span></div><div class=hidden><div class=hostname><span style=color:#d79921>root</span>@<span style=color:#98971a>mchat</span></div>$ <span id=fifthSentence></span></div><div class=hidden><div class=hostname><span style=color:#d79921>root</span>@<span style=color:#98971a>mchat</span></div>$ <span id=lastSentence></span></div></div><div class=text-footer><a href class="text-white pixelify"><span class=icon>&#128230;</span> MacOs</a>
-<span class=separator>|</span>
-<a href class="text-white pixelify"><span class=icon>&#128230;</span> Windows</a>
-<span class=separator>|</span>
-<a href class="text-white pixelify"><span class=icon>&#128230;</span> Linux</a>
-<span class=separator>|</span>
-<a href class="text-white pixelify"><span class=icon>&#128241;</span> Webapp</a></div></div></div><div class=screenshots><span style=--i:1><img src=screenshots/1.webp alt="Screenshot #2" loading=lazy>
-</span><span style=--i:2><img src=screenshots/2.webp alt="Screenshot #2" loading=lazy>
-</span><span style=--i:3><img class=contain src=screenshots/3.webp alt="Screenshot #3" loading=lazy>
-</span><span style=--i:4><img src=screenshots/4.webp alt="Screenshot #4" loading=lazy>
-</span><span style=--i:5><img src=screenshots/5.webp alt="Screenshot #5" loading=lazy>
-</span><span style=--i:6><img src=screenshots/6.webp alt="Screenshot #6" loading=lazy>
-</span><span style=--i:7><img src=screenshots/7.webp alt="Screenshot #7" loading=lazy>
-</span><span style=--i:8><img src=screenshots/7.webp alt="Screenshot #8" loading=lazy></span></div><div class=screenshots-mobile><img src=screenshots/1.webp loading=lazy></div></div></div></div></div><div class="pb-5 flex flex-col justify-center items-center font-bold text-black-600 text-xl w-100 space-y-4 z-50"><div class="font-normal text-sm">Made with
-<a href=https://gohugo.io/ target=_blank class="font-extrabold hover:underline hover:text-black-600">Hugo</a>
-based on <a href=https://themes.gohugo.io/themes/minimal_marketing/ target=_blank class="font-extrabold hover:underline hover:text-black-600">Minimal</a> theme</div></div><script src=/mchat-site/public/js/index.js defer></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.145.0"><script src="/mchat-site/public/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=mchat-site/public/livereload" data-no-instant defer></script>
+    <meta http-equiv="Content-Security-Policy"
+  content="default-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'nonce-rAnd0m'; style-src 'self' 'unsafe-inline' fonts.googleapis.com; script-src-elem	'self' 'unsafe-inline'; font-src fonts.gstatic.com; frame-src github.com" />
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<base href="/mchat-site/public/" />
+<title>Mchat</title>
+<meta name="description"
+  content="Anonymous instant chat app" />
+
+<meta itemprop="name" content="Mchat | Mchat" />
+<meta name="application-name" content="Mchat | Mchat" />
+
+<meta property="og:title" content="Mchat | Mchat" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Mchat" />
+<meta property="og:description"
+  content="Anonymous instant chat app" />
+<meta property="og:site_name" content="Mchat" />
+<meta property="og:url" content="http://localhost:1313/mchat-site/public/" />
+<meta property="og:locale" content="en">
+<meta property="og:image" content="/images/defaults/featured_image.jpg" />
+<meta property="og:image:secure_url" content="http://localhost:1313/images/defaults/featured_image.jpg" />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="images/mchat_icon.svg" />
+
+
+<link href="/mchat-site/public/css/custom.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/mchat-site/public/css/style.css" integrity="" />
+
+
+<script src="/mchat-site/public/js/typed.js" defer></script>
+
+<script src="/mchat-site/public/js/particles.js" defer></script>
+
+
+<script type="text/javascript" nonce="rAnd0m">
+  function detectOS() {
+    let userAgent = window.navigator.userAgent,
+        os = null;
+
+    if (/iPhone|iPad|iPod/.test(userAgent) || (/Mac/.test(userAgent) && 'ontouchend' in document)) {
+      os = 'ios';
+    } else if (/Android/.test(userAgent)) {
+      os = 'android';
+    } else if (/Macintosh|MacIntel|MacPPC|Mac68K/.test(userAgent)) {
+      os = 'osx';
+    } else if (/Win32|Win64|Windows|WinCE/.test(userAgent)) {
+      os = 'win';
+    } else if (!os && /Linux/.test(userAgent)) {
+      os = 'linux';
+    }
+
+    return os;
+  }
+
+  window.addEventListener("load", (event) => {
+    particlesJS.load('particles-js', 'particles.json', null);
+    const platform = detectOS();
+    let mobileScreenIdx = 0;
+    const screenshots = ['screenshots/1.webp', 'screenshots/2.webp', 'screenshots/4.webp', 'screenshots/5.webp', 'screenshots/6.webp','screenshots/7.webp'];
+
+    
+
+    [".terminal", '.screenshots'].forEach(el => document.querySelector(el).classList.add('show'));
+    setTimeout(() => {
+      document.querySelector('.screenshots').classList.add('rotate')
+      document.body.style.setProperty("--screenshots-animation-state", "running");
+      document.querySelector('.screenshots-mobile').classList.add('show');
+    }, 500)
+    setInterval(() => {
+      console.log('mobileScreenIdx', mobileScreenIdx)
+      mobileScreenIdx++;
+      if(mobileScreenIdx > screenshots.length-1) {
+        mobileScreenIdx = 0;
+      }
+      document.querySelector('.screenshots-mobile img').src = screenshots[mobileScreenIdx];
+    }, 1500);
+
+    const objectives = new Typed('#objectives', {
+      strings: ["<i>Anonymous</i>", "<i>Multiplatform</i>", "<i>Respecting your privacy</i>"],
+      typeSpeed: 60,
+      loop: true,
+      loopCount: 5,
+      backSpeed: 35,
+      fadeOut: false,
+      smartBackspace: true
+    });
+
+    const firstSentence = new Typed('#firstSentence', {
+      strings: ["<i>End2end local double layer RSA/AES encryption</i>"],
+      typeSpeed: 20,
+      loop: false,
+      backSpeed: 0,
+      fadeOut: true,
+    });
+    const secondSentence = new Typed('#secondSentence', {
+      strings: ["<i>Fully anonymous no email, no phone number!</i>"],
+      typeSpeed: 20,
+      loop: false,
+      backSpeed: 0,
+      fadeOut: true,
+    });
+    secondSentence.stop();
+    firstSentence.complete = () => {
+      document.querySelector('#firstSentence').nextElementSibling.remove();
+      document.querySelector('#secondSentence').parentElement.classList.remove('hidden');
+      secondSentence.start();
+    }
+    const thirdSentence = new Typed('#thirdSentence', {
+      strings: ["<i>Zero trackers &amp; no logs both client and server side</i>"],
+      typeSpeed: 20,
+      loop: false,
+      backSpeed: 0,
+      fadeOut: true,
+    });
+    thirdSentence.stop();
+    secondSentence.complete = () => {
+      secondSentence.toggleBlinking();
+      document.querySelector('#secondSentence').nextElementSibling.remove();
+      document.querySelector('#thirdSentence').parentElement.classList.remove('hidden');
+      thirdSentence.start();
+    }
+    thirdSentence.complete = () => {
+      thirdSentence.toggleBlinking();
+    }
+    
+    const fourthSentence = new Typed('#fourthSentence', {
+      strings: ["<i>Tor proxy &amp; hidden service</i>"],
+      typeSpeed: 20,
+      loop: false,
+      backSpeed: 0,
+      fadeOut: true,
+    });
+    fourthSentence.stop();
+    thirdSentence.complete = () => {
+      thirdSentence.toggleBlinking();
+      document.querySelector('#thirdSentence').nextElementSibling.remove();
+      document.querySelector('#fourthSentence').parentElement.classList.remove('hidden');
+      fourthSentence.start();
+    }
+    fourthSentence.complete = () => {
+      fourthSentence.toggleBlinking();
+    }
+    
+    const fifthSentence = new Typed('#fifthSentence', {
+      strings: ["<i>No conversations history</i>"],
+      typeSpeed: 20,
+      loop: false,
+      backSpeed: 0,
+      fadeOut: true,
+    });
+    fifthSentence.stop();
+    fourthSentence.complete = () => {
+      fourthSentence.toggleBlinking();
+      document.querySelector('#fourthSentence').nextElementSibling.remove();
+      document.querySelector('#fifthSentence').parentElement.classList.remove('hidden');
+      fifthSentence.start();
+    }
+    fifthSentence.complete = () => {
+      fifthSentence.toggleBlinking();
+    }
+    
+    const desktopSentence = new Typed('#lastSentence', {
+      strings: [
+        `<a href="download/mchat-${platform}.zip" target="_blank" title="Download latest">~/Downloads/mchat-${platform}</a> <small class="text-white">v1.9.1-rc.1</small>`,
+      ],
+      typeSpeed: 30,
+      loop: false,
+      backSpeed: 0,
+      fadeOut: true,
+    });
+    const mobileSentence = new Typed('#lastSentence', {
+      strings: [
+        `<a href="https://app-mchat.surge.sh/" target="_blank" title="Open webapp">For Android/iOS go to webapp</a>`,
+      ],
+      typeSpeed: 30,
+      loop: false,
+      backSpeed: 0,
+      fadeOut: true,
+    });
+    const lastSentence = platform === 'ios' || platform === 'android' ? mobileSentence : desktopSentence;
+    lastSentence.stop();
+    fifthSentence.complete = () => {
+      fifthSentence.toggleBlinking();
+      document.querySelector('#fifthSentence').nextElementSibling.remove();
+      document.querySelector('#lastSentence').parentElement.classList.remove('hidden');
+      lastSentence.start();
+    }
+    
+  });
+</script>
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="absolute inset-x-0 top-0 z-50">
+    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <div class="flex lg:flex-1">
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">Mchat</span>
+          <img class="logo" src="images/mchat_logo_color.png" alt="">
+        </a>
+      </div>
+      <iframe src="https://github.com/sponsors/marcio199226/button" title="Sponsor marcio199226" height="32" width="114" style="border: 0; border-radius: 6px; margin-right: 8px"></iframe>
+      <div class="flex lg:hidden">
+        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400" id="mobile-navbar-open-btn">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="changelogs" class="text-sm font-semibold leading-6 text-white pixelify">#Changelog (v1.9.1-rc.1)</a>
+      </div>
+    </nav>
+    
+    <div class="hidden" role="dialog" aria-modal="true" id="mobile-navbar-overlay">
+      
+      <div class="fixed inset-0 z-50"></div>
+      <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+        <div class="flex items-center justify-between">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Mchat</span>
+            <img class="h-10 w-auto" src="images/mchat_icon.svg" alt="">
+          </a>
+          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-400" id="mobile-navbar-close-btn">
+            <span class="sr-only">Close menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/25">
+            <div class="space-y-2 py-6">
+              <a href="changelogs" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800 pixelify">#Changelog (v1.9.1-rc.1)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+    <div class="main-wrapper flex flex-col pt-6">
+        
+<div id="particles-js" class="main grow">
+  <div class="relative isolate">
+    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+      <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    </div>
+    <div class="py-8 sm:py-16 lg:pb-40">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl pixelify">&lt; Mchat /&gt;</h1>
+          <p class="mt-2 text-lg leading-8 text-gray-300 neonify">
+            <span style="color: #851AE0; font-weight: normal; font-size: 1.5rem; min-width: 150px;" id="objectives"></span>
+            chat app
+        </p>
+          <div class="terminal">
+			<div class="title-bar">
+                <span class="title">mchat &mdash; bash &mdash; 80x<span class="terminal-height">25</span></span>
+            </div>
+			<div class="text-body">
+				<div class="line">
+                    <div class="hostname">
+                        <span style="color: #d79921;">root</span>@<span style="color: #98971a">mchat</span> 
+                    </div>
+                    $ <span id="firstSentence"></span>
+                </div>
+                <div class="hidden">
+                    <div class="hostname">
+                        <span style="color: #d79921;">root</span>@<span style="color: #98971a">mchat</span> 
+                    </div> 
+                    $ <span id="secondSentence"></span>
+                </div>
+                <div class="hidden">
+                    <div class="hostname">
+                        <span style="color: #d79921;">root</span>@<span style="color: #98971a">mchat</span> 
+                    </div>
+                    $ <span id="thirdSentence"></span>
+                </div>
+                <div class="hidden">
+                    <div class="hostname">
+                        <span style="color: #d79921;">root</span>@<span style="color: #98971a">mchat</span> 
+                    </div>
+                    $ <span id="fourthSentence"></span>
+                </div>
+                <div class="hidden">
+                    <div class="hostname">
+                        <span style="color: #d79921;">root</span>@<span style="color: #98971a">mchat</span> 
+                    </div>
+                    $ <span id="fifthSentence"></span>
+                </div>
+                <div class="hidden">
+                    <div class="hostname">
+                        <span style="color: #d79921;">root</span>@<span style="color: #98971a">mchat</span> 
+                    </div>
+                    $ <span id="lastSentence"></span>
+                </div>
+			</div>
+      <div class="text-footer">
+        <a href="https://marcio199226.github.io/mchat-site/public/download/mchat-osx.zip" class="text-white pixelify"><span class="icon">&#128230;</span> MacOs</a>
+        <span class="separator">|</span>
+        <a href="https://marcio199226.github.io/mchat-site/public/download/mchat-win.zip" class="text-white pixelify"><span class="icon">&#128230;</span> Windows</a>
+        <span class="separator">|</span>
+        <a href="https://marcio199226.github.io/mchat-site/public/download/mchat-linux.zip" class="text-white pixelify"><span class="icon">&#128230;</span> Linux</a>
+        <span class="separator">|</span>
+        <a href="https://mchat-web-client.vercel.app" target="_blank" class="text-white pixelify"><span class="icon">&#128241;</span> Webapp</a>
+      </div>
+		</div>
+        </div>
+        <div class="screenshots">
+            <span style="--i:1">
+              <img src="screenshots/1.webp" alt="Screenshot #2" loading="lazy" />
+            </span>
+            <span style="--i:2">
+              <img src="screenshots/2.webp" alt="Screenshot #2" loading="lazy" />
+            </span>
+            <span style="--i:3">
+              <img class="contain" src="screenshots/3.webp" alt="Screenshot #3" loading="lazy" />
+            </span>
+            <span style="--i:4">
+              <img src="screenshots/4.webp" alt="Screenshot #4" loading="lazy" />
+            </span>
+            <span style="--i:5">
+              <img src="screenshots/5.webp" alt="Screenshot #5" loading="lazy" />
+            </span>
+            <span style="--i:6">
+              <img src="screenshots/6.webp" alt="Screenshot #6" loading="lazy" />
+            </span>
+            <span style="--i:7">
+              <img src="screenshots/7.webp" alt="Screenshot #7" loading="lazy" />
+            </span>
+            <span style="--i:8">
+              <img src="screenshots/7.webp" alt="Screenshot #8" loading="lazy" />
+            </span>
+          </div>
+          
+          <div class="screenshots-mobile">
+            <img src="screenshots/1.webp" loading="lazy" >
+        </div>
+      </div>
+    </div>
+</div>
+
+    </div>
+    
+    
+        <div class="pb-5 flex flex-col justify-center items-center font-bold text-black-600 text-xl w-100 space-y-4 z-50">
+    <div class="font-normal text-sm">
+        Made with
+        <a href="https://gohugo.io/" target="_blank"
+            class="font-extrabold hover:underline hover:text-black-600">Hugo</a>
+        based on <a href="https://themes.gohugo.io/themes/minimal_marketing/" target="_blank"
+            class="font-extrabold hover:underline hover:text-black-600">Minimal</a> theme
+    </div>
+</div>
+    
+    
+<script src="/mchat-site/public/js/index.js" defer></script>
+
+</body>
+</html>
